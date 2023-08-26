@@ -1,0 +1,9 @@
+@import url('./defaults.scss');
+.app {
+  &__wrapper {
+    max-width: 1440px;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: azure
+  }
+}
