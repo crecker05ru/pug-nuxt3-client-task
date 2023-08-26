@@ -6,9 +6,9 @@ div(class="articles")
       //- <ArticleListBlock :articleData="article"/>
       div(class="article")
         div(class="article__inner")
+          img(class="article__image" :src="article.image")
           p(class="article__title") {{article.title}}
           a(class="article__link" :href="article.link") Читать
-          img(class="article__image" :src="article.image")
   </template>
   <script setup lang="ts">
   interface IArticleBlock {
@@ -25,40 +25,35 @@ const props = defineProps<{
   data: IArticlesData
 }>()
 const {data} = props
-//   const articles = ref([
-// {
-// "title": "Мир динамичного 3D Цифрового Искусства",
-// "link": "/article-1",
-// "image": "https://devtwit8.ru/img/p1.png"
-// },
-// {
-// "title": "Есть над чем задуматься: небо темнеет",
-// "link": "/article-2",
-// "image": "https://devtwit8.ru/img/p2.png"
-// },
-// {
-// "title": "Мелочь, а приятно: чистосердечное признание облегчает душу",
-// "link": "/article-3",
-// "image": "https://devtwit8.ru/img/p3.png"
-// },
-// {
-// "title": "Очевидцы сообщают, что слышали старческий скрип Амстердама",
-// "link": "/article-4",
-// "image": "https://devtwit8.ru/img/p4.png"
-// },
-// {
-// "title": "Британские «ученые» заявили, что обереги никого не защитили",
-// "link": "/article-5",
-// "image": "https://devtwit8.ru/img/p5.png"
-// },
-// {
-// "title": "Есть над чем задуматься: частокол на границе починят",
-// "link": "/article-6",
-// "image": "https://devtwit8.ru/img/p6.png"
-// }])
   </script>
   <style lang="scss" scoped>
   .articles {
-    background-color: rgb(127, 127, 255);
+    &__list {
+      display: flex;
+      column-gap: 30px;
+    }
   }
+.article {
+  &__image {
+      display: block;
+      max-width: 100%;
+      min-width: 427px;
+      height: auto;
+      max-height: 320px;
+      object-fit: cover;
+    }
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 164px;
+      height: 46px;
+      color: #fff;
+      background-color: #000;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+}
   </style>
