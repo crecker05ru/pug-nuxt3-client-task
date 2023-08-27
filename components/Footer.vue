@@ -72,8 +72,7 @@ footer(class="footer")
   &-address {
    font-size: 18px;
     line-height: 22px;
-    color: 
-#1B1B1B;
+    color: #1B1B1B;
   }
   }
   &__subscribe {
@@ -82,7 +81,7 @@ footer(class="footer")
     padding-left: 30px;
     padding-right: 30px;
     min-height: 100px;
-    background-color: #000;
+    background-color: #1B1B1B;
     &-title {
       color: #fff;
       font-weight: 800;
@@ -91,6 +90,8 @@ footer(class="footer")
     }
     &-input {
       margin-right: 37px;
+      width: 100%;
+      max-width: 353px;
       font-size: 18px;
       line-height: 26px;
       color: #fff;

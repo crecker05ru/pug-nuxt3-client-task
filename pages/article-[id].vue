@@ -1,6 +1,6 @@
 <template lang="pug">
-div(class="article") Some Article
-  <Article v-if="data" :articleData="data.body"/>
+div(class="article")
+  Article(v-if="data" :articleData="data.body") 
 </template>
 <script setup lang="ts">
 import { useArticleStore } from '../store/article';

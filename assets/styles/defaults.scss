@@ -49,3 +49,23 @@ button {
     background-color: transparent;
   }
 }
+
+input {
+  margin-right: 37px;
+  width: 100%;
+  max-width: 353px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #8D959C;
+  transition: border-bottom linear 0.25s ;
+  &:focus {
+    border-bottom: 1px solid  #3657D3
+  }
+  &::placeholder {
+    color: #8D959C;
+  }
+}

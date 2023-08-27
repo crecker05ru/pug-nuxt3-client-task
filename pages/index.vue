@@ -1,8 +1,7 @@
-<template>
-  <div>
-    <Main v-if="data?.page_type === 'home'"/>
-    <ArticleListBlock v-if="data" :data="data.body[0].data"/>
-  </div>
+<template lang="pug">
+div
+  <Main v-if="data?.page_type === 'home'"/>
+  ArticleListBlock(v-if="data" :data="data.body[0].data")
 </template>
 <script setup lang="ts">
 import { useArticlesStore } from '../store/articles';

@@ -4,5 +4,6 @@ export default defineNuxtConfig({
   css: ["@/assets/styles/app.scss"],
   modules: [
     '@pinia/nuxt',
+    'vue3-carousel-nuxt'
   ],
 })

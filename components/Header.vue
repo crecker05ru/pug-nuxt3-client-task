@@ -1,9 +1,7 @@
-<template>
-  <header class="header">
-    <div class="header__inner app__wrapper">
-      <img src="../assets/images/logo.svg" alt="Test Blog" class="header__logo">
-    </div>
-  </header>
+<template lang="pug">
+header(class="header")
+  div(class="header__inner app__wrapper")
+    img(src="../assets/images/logo.svg" alt="Test Blog" class="header__logo")
 </template>
 <script setup lang="ts">
 </script>

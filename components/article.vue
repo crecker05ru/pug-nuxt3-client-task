@@ -1,12 +1,11 @@
 <template lang="pug">
-div(class="article") Article Item
-  div(class="article__block" v-for="(block,index) in articleData" :key=index )
-    div(v-if="componentsMap[block.type]")
+div(class="article-block")
+  div(class="article-block__container" v-for="(block,index) in articleData" :key=index )
     <component :is="componentsMap[block.type]" :data="block.data"/>
-      div(class="article__inner")
-        div(class="article__intro-block") block
-          h1(class="article__title") {{ block.title }}
-          img(class="article__image" :src="block.image")
+      div(class="article-block__inner")
+        div(class="article-block__intro-block")
+          h1(class="article-block__title") {{ block.title }}
+          img(class="article-block__image" :src="block.image")
   </template>
   <script setup lang="ts">
   const componentsMap = {
