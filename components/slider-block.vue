@@ -9,8 +9,5 @@ div(class="slider-block" v-if="data")
   const { data } = props;
   </script>
 <style lang="scss" scoped>
-.slider-block {
-  margin-bottom: 100px;
-}
 </style>
   

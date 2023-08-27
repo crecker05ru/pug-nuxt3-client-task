@@ -1,11 +1,7 @@
 <template lang="pug">
 div(class="article-block")
-  div(class="article-block__container" v-for="(block,index) in articleData" :key=index )
-    <component :is="componentsMap[block.type]" :data="block.data"/>
-      div(class="article-block__inner")
-        div(class="article-block__intro-block")
-          h1(class="article-block__title") {{ block.title }}
-          img(class="article-block__image" :src="block.image")
+  div(class="article-block__container" v-for="(block,index) in articleData" :key="index" :class="[`block-number__${index}`]")
+    <component :is="componentsMap[block.type]" :data="block.data" :index="index"/>
   </template>
   <script setup lang="ts">
   const componentsMap = {
@@ -49,5 +45,40 @@ type IArticleBlocks = IArticleIntroBlock | ITextBody;
     console.log('articleData[0].type',articleData[0].type)
   })
   </script>
-  <style lang="scss" scoped>
+  <style lang="scss">
+  .article-block {
+    display: flex;
+    flex-direction: column;
+    &__container {
+      &:not(:last-child){
+      margin-bottom: 100px;
+      }
+    }
+  }
+  .block-number {
+    &__0 {
+      order: 0;
+    }
+    &__1 {
+      order: 1;
+    }
+    &__2 {
+      order: 2;
+    }
+    &__3 {
+      order: 4;
+    }
+    &__4 {
+      order: 5;
+    }
+    &__5 {
+      order: 3;
+    }
+    &__6 {
+      order: 6;
+    }
+    &__7 {
+      order: 7;
+    }
+  }
   </style>

@@ -1,8 +1,8 @@
 <template lang="pug">
 div(class="articles")
-  div(class="articles__same-articles") {{ data.title }}
+  div(v-if="route.path !== '/'" class="articles__same-articles") {{ data.title }}
   ul(class="articles__list")
-    li(v-for="(article,index) in data.articles" :key="index")
+    li(v-for="(article,index) in data.articles.slice(0,3)" :key="index")
       //- <ArticleListBlock :articleData="article"/>
       div(class="article")
         div(class="article__inner")
@@ -24,6 +24,7 @@ interface IArticlesData {
 const props = defineProps<{
   data: IArticlesData
 }>()
+const route = useRoute();
 const {data} = props
   </script>
   <style lang="scss" scoped>

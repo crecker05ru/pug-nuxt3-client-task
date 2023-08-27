@@ -20,7 +20,6 @@ div(class="subscribe-form__block")
     background-color: #1B1B1B;
     padding-left: 30px;
     padding-right: 30px;
-    margin-bottom: 100px;
     min-height: 100px;
     }
     &__title {
