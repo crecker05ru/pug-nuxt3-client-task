@@ -1,9 +1,21 @@
+@import url('./fonts.scss');
 @import url('./defaults.scss');
+
+*{
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
 .app {
   &__wrapper {
-    max-width: 1440px;
+    max-width: 1388px;
     padding-left: 24px;
     padding-right: 24px;
-    background-color: azure
   }
 }

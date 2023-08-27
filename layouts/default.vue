@@ -1,16 +1,14 @@
 <template lang="pug">
 div(class="app")
   <Header/>
-    main(class="main")
+    main(class="main app__wrapper")
       <slot/>
   <Footer/>
 </template>
 <script setup lang="ts">
 </script>
 <style lang="scss" scoped>
-.app {
-  max-width: 1388px;
-  padding-left: 24px;
-  padding-right: 24px;
+.main {
+  margin-bottom: 210px;
 }
 </style>

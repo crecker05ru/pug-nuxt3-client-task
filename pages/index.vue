@@ -1,7 +1,6 @@
 <template>
   <div>
     <Main v-if="data?.page_type === 'home'"/>
-      {{ data?.body[0].data.title }}
     <ArticleListBlock v-if="data" :data="data.body[0].data"/>
   </div>
 </template>
