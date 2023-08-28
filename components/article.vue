@@ -4,6 +4,7 @@ div(class="article-block")
     <component :is="componentsMap[block.type]" :data="block.data" :index="index"/>
   </template>
 <script setup lang="ts">
+import type { IArticleBody } from 'types';
 const componentsMap = {
   article_intro_block: resolveComponent("article-intro-block"),
   text_block: resolveComponent("text-block"),
@@ -13,27 +14,6 @@ const componentsMap = {
   article_list_block: resolveComponent("article-list-block"),
   cta_form_block: resolveComponent("cta-form-block"),
 };
-interface IArticleIntroBlock {
-  title: string;
-  image: string;
-  reading_time: number;
-  views_count: number;
-  short_description: string;
-}
-
-interface ITextBody {
-  type: string;
-  id: string;
-  data: string;
-}
-
-type IArticleBlocks = IArticleIntroBlock | ITextBody;
-
-interface IArticleBody {
-  type: string;
-  id: string;
-  data: IArticleBlocks;
-}
 
 const props = defineProps<{
   articleData: IArticleBody[];

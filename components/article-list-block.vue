@@ -10,16 +10,7 @@ div(class="articles")
           a(class="article__link" :href="article.link") Читать
   </template>
 <script setup lang="ts">
-interface IArticleBlock {
-  title: string;
-  link: string;
-  image: string;
-}
-
-interface IArticlesData {
-  title: string;
-  articles: IArticleBlock[];
-}
+import type { IArticlesData } from 'types';
 const props = defineProps<{
   data: IArticlesData;
 }>();

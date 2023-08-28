@@ -4,6 +4,14 @@ interface IMeta {
   slug: string;
 }
 
+export interface IIntroData {
+  image: string;
+  reading_time: number;
+  short_description: string;
+  title: string;
+  views_count: number;
+}
+
 export interface IArticleIntroBlock {
   title: string;
   image: string;
@@ -17,7 +25,7 @@ export interface IArticleBlock {
   link: string;
   image: string;
 }
-interface IData {
+export interface IArticlesData {
   title: string;
   articles: IArticleBlock[];
 }
@@ -30,8 +38,6 @@ interface ITextBody {
 
 type IArticleBlocks = IArticleIntroBlock | ITextBody;
 
-
-
 export interface IArticleBody {
   type: string;
   id: string;
@@ -41,7 +47,7 @@ export interface IArticleBody {
 interface IArticlesBody {
   type: string;
   id: string;
-  data: IData;
+  data: IArticlesData;
 }
 
 export interface IArticlesResponse {
@@ -53,4 +59,9 @@ export interface IArticleResponse {
   page_type: string;
   meta: IMeta;
   body: IArticleBody[];
+}
+
+export interface IImageData {
+  caption: string;
+  src: string;
 }

@@ -9,13 +9,7 @@ div(class="intro-block__inner")
     div(class="intro-block__short-description") {{ data.short_description }}
 </template>
 <script setup lang="ts">
-interface IIntroData {
-  image: string;
-  reading_time: number;
-  short_description: string;
-  title: string;
-  views_count: number;
-}
+import type {IIntroData} from '../types/index'
 const props = defineProps<{
   data: IIntroData;
 }>();

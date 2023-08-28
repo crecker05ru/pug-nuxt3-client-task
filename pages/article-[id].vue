@@ -10,7 +10,7 @@ const articleStore = useArticleStore()
 const data = computed(() => articleStore.getArticle.value) ;
 
 useHead({
-  title: 'Article' && data.value?.meta.title ,
+  title: 'Article' && `${data.value?.meta.title} Page ${data.value?.meta.slug}` ,
   meta: [
     { name: 'description', content: data.value?.meta.description }
   ],

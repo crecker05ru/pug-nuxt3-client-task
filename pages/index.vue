@@ -7,7 +7,7 @@ import { useArticlesStore } from '../store/articles';
 const articlesStore = useArticlesStore()
 const data = articlesStore.getArticles;
 useHead({
-  title: 'Fructus' && data.value?.meta.title,
+  title: 'Fructus' && `${data.value?.meta.title} Page ${data.value?.meta.slug}`,
   meta: [
     { name: 'description', content: data.value?.meta.description}
   ],
