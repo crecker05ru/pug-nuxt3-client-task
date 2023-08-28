@@ -86,7 +86,7 @@ const { data } = props;
     line-height: 1.4;
     font-weight: 400;
     transition: background-color linear 0.25s;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 425px) {
       width: 100%;
     }
     &:hover {
