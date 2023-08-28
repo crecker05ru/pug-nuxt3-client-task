@@ -1,9 +1,9 @@
 <template lang="pug">
 div(class="app")
-  <Header/>
+  <AppHeader/>
     main(class="main app__wrapper")
       <slot/>
-  <Footer/>
+  <AppFooter/>
 </template>
 <script setup lang="ts">
 </script>

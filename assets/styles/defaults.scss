@@ -27,7 +27,12 @@ li {
   margin: 0;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
 }
 
@@ -41,9 +46,9 @@ button {
   color: #fff;
   font-size: 18px;
   line-height: 26px;
-  border: 1px solid #3657D3;
-  background-color: #3657D3;
-  transition: background-color linear 0.25s ;
+  border: 1px solid #3657d3;
+  background-color: #3657d3;
+  transition: background-color linear 0.25s;
   cursor: pointer;
   &:hover {
     background-color: transparent;
@@ -60,12 +65,12 @@ input {
   background-color: transparent;
   border: none;
   outline: none;
-  border-bottom: 1px solid #8D959C;
-  transition: border-bottom linear 0.25s ;
+  border-bottom: 1px solid #8d959c;
+  transition: border-bottom linear 0.25s;
   &:focus {
-    border-bottom: 1px solid  #3657D3
+    border-bottom: 1px solid #3657d3;
   }
   &::placeholder {
-    color: #8D959C;
+    color: #8d959c;
   }
 }

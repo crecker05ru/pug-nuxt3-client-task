@@ -3,7 +3,8 @@ footer(class="footer")
   div(class="footer__inner app__wrapper")
     div(class="footer__row")
       div(class="footer__info")
-        img(class="footer__logo" alt="Test Blog" src="../assets/images/logo.svg")
+        NuxtLink(to='/')
+          img(class="footer__logo" alt="Test Blog" src="../assets/images/logo.svg")
         p(class="footer__text") Cтатьи о дизайне и искусстве, которые исследуют творческие вдохновения и актуальные тенденции, раскрывая мир эстетики и креативности
       div(class="footer__contacts")
         div(class="footer__email")
@@ -29,16 +30,15 @@ footer(class="footer")
         input(class="footer__subscribe-input" placeholder="Email" type="email")
         button(class="footer__subscribe-button") Подписаться
 </template>
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 <style lang="scss" scoped>
 .footer {
   position: relative;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
-    border-top: 1px solid #8D959C;
+    border-top: 1px solid #8d959c;
     width: 100%;
   }
   &__inner {
@@ -54,7 +54,7 @@ footer(class="footer")
   }
   &__text {
     max-width: 426px;
-    color: #8D959C;
+    color: #8d959c;
     font-size: 14px;
     line-height: 20px;
   }
@@ -65,15 +65,15 @@ footer(class="footer")
   &__email {
     margin-bottom: 20px;
     &-label {
-    font-size: 14px;
-    line-height: 24px;
-    color: #8D959C;
-  }
-  &-address {
-   font-size: 18px;
-    line-height: 22px;
-    color: #1B1B1B;
-  }
+      font-size: 14px;
+      line-height: 24px;
+      color: #8d959c;
+    }
+    &-address {
+      font-size: 18px;
+      line-height: 22px;
+      color: #1b1b1b;
+    }
   }
   &__subscribe {
     display: flex;
@@ -81,7 +81,7 @@ footer(class="footer")
     padding-left: 30px;
     padding-right: 30px;
     min-height: 100px;
-    background-color: #1B1B1B;
+    background-color: #1b1b1b;
     &-title {
       color: #fff;
       font-weight: 800;
@@ -98,13 +98,13 @@ footer(class="footer")
       background-color: transparent;
       border: none;
       outline: none;
-      border-bottom: 1px solid #8D959C;
-      transition: border-bottom linear 0.25s ;
+      border-bottom: 1px solid #8d959c;
+      transition: border-bottom linear 0.25s;
       &:focus {
-        border-bottom: 1px solid  #3657D3
+        border-bottom: 1px solid #3657d3;
       }
       &::placeholder {
-        color: #8D959C;
+        color: #8d959c;
       }
     }
     &-left {

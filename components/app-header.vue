@@ -1,10 +1,10 @@
 <template lang="pug">
 header(class="header")
   div(class="header__inner app__wrapper")
-    img(src="../assets/images/logo.svg" alt="Test Blog" class="header__logo")
+    NuxtLink(to='/')
+      img(src="../assets/images/logo.svg" alt="Test Blog" class="header__logo")
 </template>
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 <style lang="scss" scoped>
 .header {
   min-height: 40px;

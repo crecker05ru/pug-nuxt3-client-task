@@ -17,12 +17,6 @@ useHead({
 })
 
 onMounted(async () => {
-  // const response = await fetch('https://devtwit8.ru/api/v1/page/?path=/')
-  // data = response
   const response = await articleStore.setArticle(route.params.id as string)
-  console.log('response ', response )
-  console.log('data.value', data.value)
-  console.log('articleStore.getArticle.value', articleStore.getArticle.value)
-
 })
 </script>

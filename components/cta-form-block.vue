@@ -23,7 +23,7 @@ const { data } = props;
   &__block {
     min-height: 446px;
     padding: 60px;
-    background-color: #1B1B1B;
+    background-color: #1b1b1b;
   }
   &__row {
     display: flex;

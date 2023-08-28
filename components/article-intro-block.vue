@@ -33,13 +33,13 @@ const { data } = props;
   }
   &__title {
     margin-bottom: 30px;
-    color: #1B1B1B;
+    color: #1b1b1b;
     font-weight: 800;
     font-size: 56px;
     line-height: 66px;
   }
   &__short-description {
-    color: #1B1B1B;
+    color: #1b1b1b;
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;
@@ -56,14 +56,15 @@ const { data } = props;
 
   &__reading-time {
     margin-bottom: 4px;
-    color: #8D959C;
+    color: #8d959c;
     font-size: 14px;
     line-height: 20px;
   }
   &__views-count {
     margin-bottom: 50px;
-    color: #8D959C;
+    color: #8d959c;
     font-size: 14px;
     line-height: 20px;
   }
-}</style>
+}
+</style>

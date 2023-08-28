@@ -1,6 +1,5 @@
 <template lang="pug">
 div
-  <Main v-if="data?.page_type === 'home'"/>
   ArticleListBlock(v-if="data" :data="data.body[0].data")
 </template>
 <script setup lang="ts">
@@ -10,13 +9,11 @@ const data = articlesStore.getArticles;
 useHead({
   title: 'Fructus' && data.value?.meta.title,
   meta: [
-    { name: 'description', content: 'content'}
+    { name: 'description', content: data.value?.meta.description}
   ],
 })
 
 onMounted(async () => {
 const reponse = await articlesStore.setArticles()
-console.log('reponse',reponse)
-console.log('articlesStore.getArticles.value',articlesStore.getArticles.value)
 })
 </script>

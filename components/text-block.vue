@@ -21,7 +21,7 @@ const { data } = props;
     line-height: 26px;
     h2 {
       margin-bottom: 50px;
-      color: #1B1B1B;
+      color: #1b1b1b;
       font-size: 34px;
       font-weight: 800;
       line-height: 46px;
@@ -33,26 +33,25 @@ const { data } = props;
       position: relative;
       padding-left: 116px;
       &::before {
-        content: url('../assets//images/quotes-left.svg');
+        content: url("../assets//images/quotes-left.svg");
         position: absolute;
         left: 0;
       }
 
-      p{
+      p {
         font-weight: 300;
-      font-size: 18px;
-      font-style: italic;
+        font-size: 18px;
+        font-style: italic;
       }
       footer {
-      color: #8D959C;
-    }
+        color: #8d959c;
+      }
     }
     ul {
       li {
         margin-left: 115px;
       }
     }
-
   }
 }
 </style>
