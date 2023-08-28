@@ -21,6 +21,11 @@ const { data } = props;
     padding-left: 30px;
     padding-right: 30px;
     min-height: 100px;
+    background-color: #1b1b1b;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__title {
     color: #fff;
@@ -49,11 +54,20 @@ const { data } = props;
   }
   &__left {
     flex: 1 1 auto;
+    @media screen and (max-width: 768px) {
+      margin-top: 24px;
+      margin-bottom: 48px;
+    }
   }
   &__right {
     display: flex;
     flex: 1 1 auto;
     justify-content: flex-end;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 48px;
+    }
   }
 }
 </style>

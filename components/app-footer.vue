@@ -23,7 +23,7 @@ footer(class="footer")
           li(class="footer__socials-item")
             a(class="footer__socials-link")
               img(class="footer__socials-image" src="../assets/images/telegram.svg" alt="telegram")
-    div(class="footer__subscribe")
+  div(class="footer__subscribe")
       div(class="footer__subscribe-left")
         p(class="footer__subscribe-title") Подпишись на рассылку
       div(class="footer__subscribe-right")
@@ -48,19 +48,37 @@ footer(class="footer")
     display: flex;
     justify-content: space-between;
     margin-bottom: 70px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      row-gap: 30px;
+      align-items: center;
+    }
   }
   &__logo {
+    display: block;
     margin-bottom: 20px;
+    @media screen and (max-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   &__text {
     max-width: 426px;
     color: #8d959c;
     font-size: 14px;
     line-height: 20px;
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+      text-align: center;
+    }
   }
   &__socials {
     display: flex;
     column-gap: 20px;
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
   }
   &__email {
     margin-bottom: 20px;
@@ -68,6 +86,9 @@ footer(class="footer")
       font-size: 14px;
       line-height: 24px;
       color: #8d959c;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
     }
     &-address {
       font-size: 18px;
@@ -78,10 +99,17 @@ footer(class="footer")
   &__subscribe {
     display: flex;
     align-items: center;
+    max-width: 1340px;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 30px;
     padding-right: 30px;
     min-height: 100px;
     background-color: #1b1b1b;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
     &-title {
       color: #fff;
       font-weight: 800;
@@ -109,11 +137,20 @@ footer(class="footer")
     }
     &-left {
       flex: 1 1 auto;
+      @media screen and (max-width: 768px) {
+        margin-top: 24px;
+        margin-bottom: 48px;
+      }
     }
     &-right {
       display: flex;
       flex: 1 1 auto;
       justify-content: flex-end;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 48px;
+      }
     }
   }
 }

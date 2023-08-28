@@ -1,7 +1,7 @@
 <template lang="pug">
 carousel(:items-to-show="1")
   slide(v-for="(slide, index) in slides" :key="slide") 
-    img(:src="slide")
+    img(class="app-slider__slider-image" :src="slide")
   template(#addons="{ slidesCount,currentSlide }")
     div(class="app-slider__slider-numbers") {{ currentSlide + 1 }} / {{ slidesCount }} 
     navigation
@@ -19,15 +19,28 @@ const { slides } = props;
   &__slider-numbers {
     margin-top: 25px;
   }
+  &__slider-image {
+    max-width: 100%;
+  }
 }
 
 .carousel__prev,
 .carousel__next {
   color: #fff;
   background-color: #000;
+  @media screen and (max-width: 768px) {
+    width: 25px;
+    height: 25px;
+  }
   &:hover {
     color: #fff;
     background-color: #000;
+  }
+}
+.carousel__icon {
+  @media screen and (max-width: 768px) {
+    width: 25px;
+    height: 25px;
   }
 }
 </style>

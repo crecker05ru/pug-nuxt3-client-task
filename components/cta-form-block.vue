@@ -28,29 +28,57 @@ const { data } = props;
   &__row {
     display: flex;
     column-gap: 60px;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
   }
   &__column {
     flex: 1 1 50%;
+    @media screen and (max-width: 768px) {
+      flex: 1 1 100%;
+    }
   }
   &__image {
     display: block;
     width: 595px;
     height: 100%;
     max-height: 326px;
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+    }
   }
 }
 .form {
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 768px) {
+    align-items: center;
+  }
   &__title {
     margin-bottom: 50px;
     color: #fff;
     font-size: 34px;
     font-weight: 800;
     line-height: 46px;
+    @media screen and (max-width: 1200px) {
+      font-size: 2rem;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 1.6rem;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 1rem;
+    }
   }
   &__inputs {
     margin-bottom: 50px;
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__input {
     margin-bottom: 16px;

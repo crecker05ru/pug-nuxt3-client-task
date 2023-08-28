@@ -2,7 +2,7 @@
 div(class="articles")
   div(v-if="route.path !== '/'" class="articles__same-articles") {{ data.title }}
   ul(class="articles__list")
-    li(v-for="(article,index) in data.articles.slice(0,3)" :key="index")
+    li(class="articles__item" v-for="(article,index) in data.articles.slice(0,3)" :key="index")
       div(class="article")
         div(class="article__inner")
           img(class="article__image" :src="article.image")
@@ -10,7 +10,7 @@ div(class="articles")
           a(class="article__link" :href="article.link") Читать
   </template>
 <script setup lang="ts">
-import type { IArticlesData } from 'types';
+import type { IArticlesData } from "types";
 const props = defineProps<{
   data: IArticlesData;
 }>();
@@ -22,6 +22,17 @@ const { data } = props;
   &__list {
     display: flex;
     column-gap: 30px;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    flex: 1 1 33%;
+
+    @media screen and (max-width: 768px) {
+      flex: 1 1 100%;
+      margin-bottom: 60px;
+    }
   }
   &__same-articles {
     margin-bottom: 50px;
@@ -33,12 +44,16 @@ const { data } = props;
 .article {
   &__image {
     display: block;
-    max-width: 100%;
-    min-width: 427px;
+    width: 100%;
+    /* min-width: 427px; */
     margin-bottom: 20px;
     height: auto;
     max-height: 320px;
     object-fit: cover;
+
+    @media screen and (max-width: 768px) {
+      max-height: auto;
+    }
   }
   &__title {
     margin-bottom: 30px;
@@ -47,6 +62,10 @@ const { data } = props;
     line-height: 30px;
     text-overflow: ellipsis;
     overflow: hidden;
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+      line-height: 1.2;
+    }
 
     @supports (-webkit-line-clamp: 2) {
       display: -webkit-box;
@@ -67,6 +86,9 @@ const { data } = props;
     line-height: 1.4;
     font-weight: 400;
     transition: background-color linear 0.25s;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
     &:hover {
       background-color: #3657d3;
     }

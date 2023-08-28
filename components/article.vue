@@ -4,7 +4,7 @@ div(class="article-block")
     <component :is="componentsMap[block.type]" :data="block.data" :index="index"/>
   </template>
 <script setup lang="ts">
-import type { IArticleBody } from 'types';
+import type { IArticleBody } from "types";
 const componentsMap = {
   article_intro_block: resolveComponent("article-intro-block"),
   text_block: resolveComponent("text-block"),
@@ -27,6 +27,9 @@ const { articleData } = props;
   &__container {
     &:not(:last-child) {
       margin-bottom: 100px;
+      @media screen and (max-width: 768px) {
+        margin-bottom: 54px;
+      }
     }
   }
 }

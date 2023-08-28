@@ -4,7 +4,7 @@ div(class="image-block__inner")
   div(v-if="data.caption" class="image-block__caption") Caption {{ data.caption }}
   </template>
 <script setup lang="ts">
-import type { IImageData } from 'types'
+import type { IImageData } from "types";
 const props = defineProps<{
   data: IImageData;
 }>();
@@ -22,7 +22,7 @@ const { data } = props;
   }
   &__caption {
     max-width: 200px;
-    color:#8D959C;
+    color: #8d959c;
     margin-left: auto;
     font-size: 14px;
     line-height: 20px;
